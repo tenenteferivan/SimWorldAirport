@@ -3,35 +3,52 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
-# Build
-dist/
-build/
-out/
+# Vite
+web/dist/
+web/.vite/
 
-# WebAssembly
-wasm/*.wasm
-wasm/*.js
+# Environment
+.env
+.env.*
+!.env.example
 
-# CMake
-engine/build/
-build/
-CMakeFiles/
-CMakeCache.txt
-cmake_install.cmake
-Makefile
+# TypeScript
+*.tsbuildinfo
 
 # IDE
-.vscode/
-.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
 
 # OS
 .DS_Store
 Thumbs.db
 
+# C/C++ build
+build/
+build-*/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+
+# Native binaries
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
+*.exe
+
+# WASM generated output
+wasm/dist/
+wasm/build/
+
 # Logs
 *.log
-
-# Temporary
-*.tmp
-*.temp
